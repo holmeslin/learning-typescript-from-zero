@@ -15,6 +15,7 @@
 ```bash
 npm ci                 # 安裝檢查範例用的 TypeScript
 npm run check          # 用 tsc 檢查所有程式碼範例的型別
+npm run check:errors   # 比對書裡貼的錯誤訊息和 tsc 實際輸出的全文
 npm run serve          # 在瀏覽器預覽，存檔後自動重新整理
 npm run build          # 輸出到 zh-TW/book/
 ```
