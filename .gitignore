@@ -3,3 +3,4 @@ book/
 public/
 .check/
 .DS_Store
+.check-errors/
