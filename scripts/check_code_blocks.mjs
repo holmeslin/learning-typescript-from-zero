@@ -33,10 +33,10 @@ function* codeBlocks(markdown) {
   for (const [index, block] of blocks.entries()) {
     if (block.lang !== "ts" || block.attrs.includes("ignore")) continue;
     const fails = block.attrs.includes("fails");
-    // 錯誤訊息在下一個 ts 區塊之前、第一個含 error TS 的 text 區塊裡
+    // 錯誤訊息在下一個 ts,fails 區塊之前、第一個含 error TS 的 text 區塊裡
     let output = "";
     for (const next of blocks.slice(index + 1)) {
-      if (next.lang === "ts") break;
+      if (next.lang === "ts" && next.attrs.includes("fails")) break;
       if (next.lang === "text" && /error TS\d+/.test(next.code)) {
         output = next.code;
         break;
