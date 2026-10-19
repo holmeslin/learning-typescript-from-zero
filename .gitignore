@@ -1,0 +1,5 @@
+node_modules/
+book/
+public/
+.check/
+.DS_Store
